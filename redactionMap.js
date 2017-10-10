@@ -57,7 +57,55 @@ const redactionMap = {
         childElementAttribute: 'src',
         value: '/favicon.ico'
       }
-    }
+    },
+    {
+      description: 'profile pictures in "people you may know" (feed)',
+      type: 'class',
+      selector: 'feed-s-avatar-image b0 member ember-view',
+      replacement: {
+        type: 'attribute',
+        attribute: 'src',
+        value: '/favicon.ico'
+      }
+    },
+    {
+      description: 'profile pictures in "people you may know" (feed)',
+      type: 'class',
+      selector: 'avatar member EntityPhoto-circle-3',
+      replacement: {
+        type: 'attribute',
+        attribute: 'src',
+        value: '/favicon.ico'
+      }
+    },
+    {
+      description: 'name in "people you may know" (feed)',
+      type: 'class',
+      selector: 'feed-base-pymk-list-item__name Sans-15px-black-85%-semibold',
+      replacement: {
+        type: 'text',
+        value: '[Name]'
+      }
+    },
+    {
+      description: 'name in (feed)',
+      type: 'class',
+      selector: ' feed-s-post-meta__name Sans-15px-black-85%-semibold',
+      replacement: {
+        type: 'text',
+        value: '[Name]'
+      }
+    },
+    {
+      description: 'profile pictures in (feed)'
+      type: 'class',
+      selector: 'feed-s-avatar-image b0 member ember-view',
+      replacement: {
+        type: 'attribute',
+        attribute: 'src',
+        value: '/favicon.ico'
+      }
+    },
   ],
   'angel.co': [
     {
