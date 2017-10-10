@@ -57,7 +57,74 @@ const redactionMap = {
         childElementAttribute: 'src',
         value: '/favicon.ico'
       }
-    }
+    },
+    {
+      description: 'See connections (__+), this appears on profile pages top right corner',
+      type: 'class',
+      selector: 'lazy-image profile-picture loaded',
+      replacement: {
+        type: 'attribute',
+        attribute: 'src',
+        value: '/favicon.ico'
+      }
+    },
+    {
+      description: 'Things the person liked (profile page)',
+      type: 'class',
+      selector: 'pv-recent-activity-item__message',
+      replacement: {
+        type: 'text',
+        value: '[Name] liked'
+      }
+    },
+    // This is too general, it hides other important page elements
+    // {
+    //   description: 'The connections you have in common with the person (profile page)',
+    //   type: 'class',
+    //   selector: 'Sans-15px-black-55%',
+    //   replacement: {
+    //     type: 'text',
+    //     value: 'HIDDEN'
+    //   }
+    // },
+    {
+      description: 'The persons recent activity (profile page)',
+      type: 'class',
+      selector: 'pv-recent-activity-section__card-heading Sans-21px-black-85%',
+      replacement: {
+        type: 'text',
+        value: '[Name]\' Activity'
+      }
+    },
+    {
+      description: 'These are the profile photos on recommendations on peoples profile pages',
+      type: 'class',
+      selector: 'lazy-image loaded pv-entity__logo-img EntityPhoto-circle-4',
+      replacement: {
+        type: 'attribute',
+        attribute: 'src',
+        value: '/favicon.ico'
+      }
+    },
+    {
+      description: 'There are the names of people who gave recommendations on peoples profile pages',
+      type: 'class',
+      selector: 'Sans-17px-black-85%-semibold-dense',
+      replacement: {
+        type: 'text',
+        value: '[Name]'
+      }
+    },
+    {
+      description: 'These are the profile photos on recommendations on peoples profile pages',
+      type: 'class',
+      selector: 'lazy-image EntityPhoto-circle-4 fl loaded',
+      replacement: {
+        type: 'attribute',
+        attribute: 'src',
+        value: '/favicon.ico'
+      }
+    },
   ],
   'angel.co': [
     {
